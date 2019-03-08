@@ -20,9 +20,6 @@ before_script:
 build:
   stage: build
   script:
-    - echo "${REGISTRY_USERNAME}"
-    - echo "${REGISTRY_PASSWORD}"
-    - echo "${REGISTRY_ENDPOINT}"
     - docker pull ${CONTAINER_RELEASE_IMAGE}
     - docker build --cache-from ${CONTAINER_RELEASE_IMAGE} -t ${CONTAINER_TEST_IMAGE} .
     - docker push ${CONTAINER_TEST_IMAGE}
