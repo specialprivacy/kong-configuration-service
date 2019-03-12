@@ -7,19 +7,11 @@
       "config": {
         "bearer_only": "no",
         "client_id": "special-platform",
-        "client_secret": "84be2f39-35dd-4976-89db-57285eadf30e",
+        "client_secret": "dd52905b-46a7-4e0c-9770-c8178e23d9d7",
         "discovery": "https://demonstrator-special.tenforce.com/auth/realms/special/.well-known/openid-configuration",
-        "filters": null,
-        "introspection_endpoint": "null",
-        "introspection_endpoint_auth_method": null,
-        "logout_path": "/logout",
         "realm": "special",
-        "recovery_page_path": null,
-        "redirect_after_logout_uri": "/",
-        "redirect_uri_path": "/",
         "response_type": "code",
         "scope": "all openid",
-        "session_secret": null,
         "ssl_verify": "no",
         "token_endpoint_auth_method": "client_secret_post"
       },
@@ -27,6 +19,31 @@
     }
   ],
   "services": [
+    {
+      "name": "WelcomePageFrontend",
+      "host": "welcome-page",
+      "port": 80,
+      "protocol": "http",
+      "connect_timeout": 60000,
+      "read_timeout": 60000,
+      "write_timeout": 60000,
+      "routes": [
+        {
+          "paths": [
+            "/"
+          ],
+          "strip_path": true,
+          "preserve_host": false,
+          "regex_priority": 0,
+          "hosts": null,
+          "protocols": [
+            "http",
+            "https"
+          ],
+          "methods": null
+        }
+      ]
+    },
     {
       "name": "ConsentManagementBackend",
       "host": "consent-management-backend",
@@ -37,7 +54,7 @@
       "write_timeout": 60000,
       "routes": [
         {
-          "paths": null,
+          "paths": ["/users", "/applications", "/policies"],
           "strip_path": false,
           "preserve_host": false,
           "regex_priority": 0,
@@ -138,7 +155,26 @@
       "protocol": "http",
       "connect_timeout": 60000,
       "read_timeout": 60000,
-      "write_timeout": 60000
+      "write_timeout": 60000,
+      "routes": [
+        {
+          "paths": ["/transparency-backend"],
+          "strip_path": true,
+          "preserve_host": false,
+          "regex_priority": 0,
+          "hosts": null,
+          "protocols": [
+            "http",
+            "https"
+          ],
+          "methods": [
+            "DELETE",
+            "GET",
+            "POST",
+            "PUT"
+          ]
+        }
+      ]
     },
     {
       "name": "TransparencyFrontend",
