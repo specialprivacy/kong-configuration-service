@@ -8,7 +8,7 @@
         "bearer_only": "no",
         "client_id": "special-platform",
         "client_secret": "dd52905b-46a7-4e0c-9770-c8178e23d9d7",
-        "discovery": "http://keycloak:8080/auth/realms/special/.well-known/openid-configuration",
+        "discovery": "http://demonstrator-special.tenforce.com:81/auth/realms/special/.well-known/openid-configuration",
         "realm": "special",
         "response_type": "code",
         "scope": "all openid",
@@ -19,31 +19,6 @@
     }
   ],
   "services": [
-    {
-      "name": "Keycloak",
-      "host": "keycloak",
-      "port": 8080,
-      "protocol": "http",
-      "connect_timeout": 60000,
-      "read_timeout": 60000,
-      "write_timeout": 60000,
-      "routes": [
-        {
-          "paths": [
-            "/auth"
-          ],
-          "strip_path": false,
-          "preserve_host": false,
-          "regex_priority": 0,
-          "hosts": null,
-          "protocols": [
-            "http",
-            "https"
-          ],
-          "methods": null
-        }
-      ]
-    },
     {
       "name": "WelcomePageFrontend",
       "host": "welcome-page",
