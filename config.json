@@ -20,6 +20,31 @@
   ],
   "services": [
     {
+      "name": "PersonalDataGateway",
+      "host": "personal-data-gateway",
+      "port": 8888,
+      "protocol": "http",
+      "connect_timeout": 60000,
+      "read_timeout": 60000,
+      "write_timeout": 60000,
+      "routes": [
+        {
+          "paths": [
+            "/processing"
+          ],
+          "strip_path": false,
+          "preserve_host": false,
+          "regex_priority": 0,
+          "hosts": null,
+          "protocols": [
+            "http",
+            "https"
+          ],
+          "methods": null
+        }
+      ]
+    },
+    {
       "name": "WelcomePageFrontend",
       "host": "welcome-page",
       "port": 80,
