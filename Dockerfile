@@ -15,4 +15,6 @@ RUN chmod +x /wait-for-it.sh
 
 
 COPY config.json /config.json
-RUN echo "Setting Keycloak endpoint to $KEYCLOAK_ENDPOINT" & sed -i "s#PLACEHOLDER_KEYCLOAK_ENDPOINT#$KEYCLOAK_ENDPOINT#g" /config.json
+
+COPY ./docker-entrypoint.sh /
+ENTRYPOINT ["sh", "docker-entrypoint.sh"]
