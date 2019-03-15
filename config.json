@@ -8,7 +8,7 @@
         "bearer_only": "no",
         "client_id": "special-platform",
         "client_secret": "dd52905b-46a7-4e0c-9770-c8178e23d9d7",
-        "discovery": "http://demonstrator-special.tenforce.com:81/auth/realms/special/.well-known/openid-configuration",
+        "discovery": "PLACEHOLDER_KEYCLOAK_ENDPOINT/auth/realms/special/.well-known/openid-configuration",
         "realm": "special",
         "response_type": "code",
         "scope": "all openid",
