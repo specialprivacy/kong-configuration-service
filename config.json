@@ -275,33 +275,6 @@
           "methods": null
         }
       ]
-    },
-    {
-      "name": "DataPortability",
-      "host": "data-portability",
-      "port": 8080,
-      "protocol": "http",
-      "connect_timeout": 60000,
-      "read_timeout": 60000,
-      "write_timeout": 60000,
-      "routes": [
-        {
-          "paths": [
-            "/data-portability-requests",
-            "/data-portability-responses",
-            "/data-subjects"
-          ],
-          "strip_path": false,
-          "preserve_host": false,
-          "regex_priority": 0,
-          "hosts": null,
-          "protocols": [
-            "http",
-            "https"
-          ],
-          "methods": null
-        }
-      ]
     }
   ],
   "upstreams": null
