@@ -1,0 +1,18 @@
+{
+  "name": "init-kong",
+  "version": "1.0.0",
+  "description": "This repository contains the system description for the SPECIAL Demonstrator. It combines the SPECIAL components with other off the shelve components into a working example system. A live copy should be available at https://demonstrator-special.tenforce.com",
+  "main": "init-kong.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.tenforce.com:special/demonstrator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
