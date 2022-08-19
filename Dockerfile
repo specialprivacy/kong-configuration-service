@@ -1,5 +1,6 @@
-FROM node:12.18.1
+FROM node:12.18.1-alpine
 
+WORKDIR /
 
 COPY wait-for-it.sh /wait-for-it.sh
 RUN chmod +x /wait-for-it.sh

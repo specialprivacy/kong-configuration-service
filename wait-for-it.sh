@@ -1,5 +1,4 @@
 #!/bin/sh
-#   Use this script to test if a given TCP host/port are available
 
 TIMEOUT=15
 QUIET=0
